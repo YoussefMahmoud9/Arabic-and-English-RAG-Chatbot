@@ -1,0 +1,37 @@
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+
+# Local runtime data, models, uploads, indexes, and virtual environments
+.tools/
+.venv*/
+chroma_db/
+uploads/
+data/
+ollama-models/
+_rag_bootstrap.ps1
+
+# Build output and logs
+output/
+*.log
+*.tmp
+*.download
+
+# Python and test caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Editor and OS metadata
+.agents/
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini
+
+# User documents are private by default; only publish the generated project guide
+*.pdf
+!docs/VOIS_RAG_User_and_Technical_Guide.pdf

@@ -1,0 +1,32 @@
+# Verified working combination (Python 3.11; installer provisions it locally)
+chromadb==1.5.9
+gradio==6.20.0
+langchain==1.3.14
+langchain-chroma==1.1.0
+langchain-classic==1.0.8
+langchain-community==0.4.2
+langchain-core==1.5.0
+langchain-text-splitters==1.1.2
+pypdf==6.14.2
+ollama==0.6.2
+pymupdf==1.28.2
+
+# Document ingestion (PDF/DOCX/PPTX)
+docx2txt==0.9
+python-docx==1.2.0
+python-pptx==1.0.2
+arabic-reshaper==3.0.1
+python-bidi==0.6.11
+
+# Tests
+pytest==9.1.1
+
+# Ollama server binaries are NOT pip-managed:
+#   .tools/Ollama/ollama.exe  (v0.32.3, run `ollama serve`)
+# Required models:
+#   qwen2.5:3b         (chat / answers -- the default in Rag.py)
+#   nomic-embed-text   (embeddings for English documents)
+#   bge-m3             (embeddings for Arabic documents)
+# qwen3:4b / qwen3:1.7b are installed but NOT the default: benchmarked on this
+# CPU they were far slower and less coherent than qwen2.5:3b. To switch, set
+# RAG_MODEL. Stored with the project via OLLAMA_MODELS - see start_rag.bat
